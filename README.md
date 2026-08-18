@@ -43,12 +43,6 @@ open index.html
 - JavaScript vanilla (DOM, setInterval, Web Audio API)
 - SVG para o indicador de progresso circular
 
-## Screenshot
-
-![preview](preview.png)
-
-> *print da tela do timer em modo foco*
-
 ## O que aprendi
 
 - Manipulação do DOM sem jQuery/frameworks
