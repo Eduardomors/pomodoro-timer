@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍅 Pomodoro Timer</h1>
+        
+        <div class="tabs">
+            <button class="tab active" data-mode="pomodoro">Foco</button>
+            <button class="tab" data-mode="short">Pausa Curta</button>
+            <button class="tab" data-mode="long">Pausa Longa</button>
+        </div>
+
+        <div class="timer-wrapper">
+            <div class="timer-circle">
+                <svg viewBox="0 0 200 200">
+                    <circle class="track" cx="100" cy="100" r="90"/>
+                    <circle class="progress" cx="100" cy="100" r="90" id="progressCircle"/>
+                </svg>
+                <div class="timer-display" id="timerDisplay">25:00</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-start" id="btnStart">Iniciar</button>
+            <button class="btn btn-reset" id="btnReset">Resetar</button>
+        </div>
+
+        <div class="task-section">
+            <input type="text" id="taskInput" placeholder="No que você está trabalhando?" maxlength="60">
+            <p class="current-task" id="currentTask"></p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number" id="pomodorosCount">0</span>
+                <span class="stat-label">Pomodoros hoje</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="totalMinutes">0</span>
+                <span class="stat-label">Minutos de foco</span>
+            </div>
+        </div>
+
+        <div class="history" id="historySection" style="display: none;">
+            <h3>Histórico de hoje</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
